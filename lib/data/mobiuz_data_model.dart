@@ -26,7 +26,61 @@ class MobiuzInternetToplam {
   final String code;
 }
 
-class MobiuzTarifData {
+class MobiuzSmsToplam {
+  MobiuzSmsToplam({
+    required this.sms,
+    required this.price,
+    required this.code,
+  });
+  final String sms;
+  final String price;
+  final String code;
+}
+
+class MobiuzUSSDrequset {
+  MobiuzUSSDrequset({
+    required this.ussd,
+    required this.code,
+  });
+  final String ussd;
+  final String code;
+}
+
+class MobiuzData {
+  List<MobiuzUSSDrequset> ussdSorov = [
+    MobiuzUSSDrequset(
+      ussd: "Balansni tekshirish *100#",
+      code: "*100#",
+    ),
+    MobiuzUSSDrequset(
+      ussd: "To'lov sanasini tekshirish *001#",
+      code: "*001#",
+    ),
+    MobiuzUSSDrequset(
+      ussd: "Tarif qoldig'ini tekshirish *102#",
+      code: "*102#",
+    ),
+    MobiuzUSSDrequset(
+      ussd: "Daqiqa to'plamlari uchun *103#",
+      code: "*103#",
+    ),
+    MobiuzUSSDrequset(
+      ussd: "Mening raqamim *150#",
+      code: "*150#",
+    ),
+  ];
+  List<MobiuzSmsToplam> smsMobiuz = [
+    MobiuzSmsToplam(
+      sms: "SMS 100",
+      price: "4 500 so'm",
+      code: "*104*100#",
+    ),
+    MobiuzSmsToplam(
+      sms: "SMS 300",
+      price: "10 500 so'm",
+      code: "*104*300#",
+    ),
+  ];
   List<MobiuzTarifModel> tarifsMobiuz = [
     MobiuzTarifModel(
       tarif: "Omad Plus",
@@ -165,9 +219,6 @@ class MobiuzTarifData {
       tarmoqIchda: "UNLIM",
     ),
   ];
-}
-
-class MobiuzInternetData {
   List<MobiuzInternetToplam> mobiuzInternet = [
     MobiuzInternetToplam(
       mb: "300 MB",

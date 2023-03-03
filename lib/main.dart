@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobi_uz/router.dart';
-import 'package:mobi_uz/screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());

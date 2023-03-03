@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:mobi_uz/utils/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SmsPackage extends StatefulWidget {
-  const SmsPackage({super.key});
+class USSDPackage extends StatefulWidget {
+  const USSDPackage({super.key});
 
   @override
-  State<SmsPackage> createState() => _SmsPackageState();
+  State<USSDPackage> createState() => _USSDPackageState();
 }
 
-class _SmsPackageState extends State<SmsPackage> {
+class _USSDPackageState extends State<USSDPackage> {
   Future<void> _makePhoneCall(String phoneNumber) async {
     final Uri launchUri = Uri(
       scheme: 'tel',
@@ -26,7 +26,7 @@ class _SmsPackageState extends State<SmsPackage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.red,
-        title: const Text("Internet to'plamlari"),
+        title: const Text("USSD so'rovlar"),
       ),
       body: ListView.builder(
         itemCount: MobiuzData().smsMobiuz.length,

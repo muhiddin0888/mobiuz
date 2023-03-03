@@ -30,9 +30,9 @@ class _TarifPageState extends State<TarifPage> {
         title: const Text("Tariflar"),
       ),
       body: ListView.builder(
-        itemCount: MobiuzTarifData().tarifsMobiuz.length,
+        itemCount: MobiuzData().tarifsMobiuz.length,
         itemBuilder: (context, index) {
-          List<MobiuzTarifModel> tarif = MobiuzTarifData().tarifsMobiuz;
+          List<MobiuzTarifModel> tarif = MobiuzData().tarifsMobiuz;
           return TarifItem(
             tarif: tarif[index].tarif,
             onTap: () {

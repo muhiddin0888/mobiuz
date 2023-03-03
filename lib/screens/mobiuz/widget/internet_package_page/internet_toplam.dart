@@ -29,9 +29,9 @@ class _InternetPackageState extends State<InternetPackage> {
         title: const Text("Internet to'plamlari"),
       ),
       body: ListView.builder(
-        itemCount: MobiuzInternetData().mobiuzInternet.length,
+        itemCount: MobiuzData().mobiuzInternet.length,
         itemBuilder: (context, index) {
-          List<MobiuzInternetToplam> internet = MobiuzInternetData().mobiuzInternet;
+          List<MobiuzInternetToplam> internet = MobiuzData().mobiuzInternet;
           return PackageItem(
             mb: internet[index].mb,
             price: internet[index].price,
